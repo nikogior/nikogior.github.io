@@ -7,10 +7,18 @@
     
 <!--The HEAD contains META(data) information about this document-->
 <head> 
-    
-    <!--External CSS-->
+
+    <!--CSS stands for Cascading Style Sheets
+        CSS describes how HTML elements are to be displayed on screen, paper, or in other media.
+        CSS saves a lot of work. It can control the layout of multiple web pages all at once.
+        CSS can be added to HTML elements in 3 ways:
+        Inline - by using the style attribute in HTML elements
+        Internal - by using a <style> element in the <head> section
+        External - by using an external CSS file-->
+ 
+    <!--External CSS (stylesheet)-->
     <link rel="stylesheet" type="text/css" href="styles.css">
-    
+
 <!--Title for this doc-->
 <title>MY WEBPAGE</title>                   
 </head>
@@ -21,7 +29,7 @@ Style attribute with background color awuamarine-->
     
     <!--Large Heading 1-6 
     Style attribute with text color crimson-->
-    <h1 style="color:crimson">Paragraph 1</h1>   
+    <h1 id="par1">Paragraph 1</h1>   
     
     <!--Paragraph + title is displayed when hovered over-->
     <p title="I'm the 1st Paragraph" style="color:blueviolet;">
@@ -50,7 +58,9 @@ Style attribute with background color awuamarine-->
     </pre>
     <hr>
 
-    <h4>Paragraph 4</h4>
+    <!--Title with solid border-->
+    <h4 style="border:2px solid violet">Paragraph 4</h4>
+
     <b> - Bold text </b>
     <strong> - Important text</strong>
     <i> - Italic text</i>
@@ -81,31 +91,80 @@ Style attribute with background color awuamarine-->
             </abbr> was founded in 1948.</p>
     <br>
 
+    <!--<address> element defines contact information 
+        (author/owner) of a document or an article-->
+    <address>
+            Written by John Doe.<br> 
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            USA
+    </address>
+
+    <!--<cite> element defines the title of a work.-->
+    <p><cite>Mona Lisa</cite> By Davinci</p>
+
+    <!--<bdo> element defines bi-directional override.-->
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+    <br>
+
+    <hr>
+    <h5>Paragraph 5 (CSS)</h5>
+
+    <!--ID : to specify an element with a specific ID-->
+    <p title="ID = Special" id="Special">This is a Special paragraph!!</p>
+    <br>
+
+    <!--style for a special type of elements-->
+    <p class="type1">I am different!! (class type 1)</p>
+
     <!--Used for a LINK, href (link address) is an 
         ATTRIBUTE -> additional information about HTML elements-->   
-    <a href="http://www.google.com">This is a LINK to GOOGLE</a>    
+    <a id="GoogleLink" href="http://www.google.com">This is a LINK to GOOGLE</a>    
 
     <!--BREAK (new line) with Empty ELEMENT-->
-    <br>
+    <br> <br>
     
     <!--IMAGE FILE : source file (src), alternative text (alt) 
         (if the image can't be displayed), 
         width, and height are provided as attributes-->
-    <img title="SAD AFFLECK" src="nikogior.github.io/aP45jWX6_700wa_0.gif" 
+    <img title="SAD AFFLECK" src="C:\Users\nikogior\Desktop\Obama Face\aP45jWX6_700wa_0.gif" 
     alt="SAD AFFLECK"  width="400" height="300">                                                             
 
-    
+    <!--Google Maps!!-->
+    <div id="map" style="width:1200px;height:400px">
+        My map will go here</div>
 
 </body>
 
 <script>
-    let a = 10;
-    
-    
+    // Function myMap: Google Map centered in London, England
+    function myMap() {
+        var mapOptions = {
+           center: new google.maps.LatLng(51.5, -0.12),
+           zoom: 10,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
 </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap">
+</script>
+
 
 </html>
 
 <!-- <tagname (attribute)name="value" > ELEMENT </tagname> TAGS -->
 <!-- Style attribute: <tagname style="property:value;"></tagname>
 The property is a CSS property. The value is a CSS value. -->
+
+<!--The following are HTML tags to be executed 
+    by Internet Explorer only:-->
+<!--[if IE 9]>
+    .... some HTML here ....
+<![endif]-->
+
+<!--Colors can be represented by:
+    RGB values, HEX values, HSL values, 
+    RGBA values, and HSLA values-->
