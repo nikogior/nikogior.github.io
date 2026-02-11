@@ -33,11 +33,12 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minima
+# theme: minima
+theme: merlot
 plugins:
   - jekyll-feed
-  
-markdown: kramdown
+
+# markdown: kramdown
 
 
 # lsi: false
