@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # nikogior.github.io
 
 # Working on the website using Jekyll
@@ -26,7 +25,28 @@ jekyll new devops-portfolio
 cd devops-portfolio
 bundle exec jekyll serve
 ```
-=======
+
+```sh
+# Installing the Chirpy Theme:
+
+# Clone your existing repo
+cd devops-portfolio
+
+# Option A: Use Devlopr theme (DevOps focused)
+git remote add theme https://github.com/cotes2020/jekyll-theme-chirpy.git
+git fetch theme
+git merge theme/master --allow-unrelated-histories
+
+# Option B: Use Chirpy theme (Technical docs style)
+# Follow: https://github.com/cotes2020/jekyll-theme-chirpy
+
+# Install dependencies
+bundle install
+
+# Test locally
+bundle exec jekyll serve
+# Visit localhost:4000
+```
 <!-- markdownlint-disable-next-line -->
 <div align="center">
 
